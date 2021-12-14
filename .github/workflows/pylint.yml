@@ -27,4 +27,4 @@ jobs:
     - name: Attempting install
       run: |
         pip install .
-        ls -l /usr/lib/python3/dist-packages/ap*
+	python throwaway.py
