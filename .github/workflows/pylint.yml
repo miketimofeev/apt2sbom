@@ -28,6 +28,7 @@ jobs:
       run: |
         pip install .
         echo 'PYTHONPATH=${PYTHONPATH}:/usr/local/lib/python3.9/dist-packages:/usr/local/lib/python3.10/dist-packages:/usr/lib/python3/dist-packages' >> $GITHUB_ENV
+        sudo ln -s /usr/lib/python3/dist-packages/apt_pkg.cpython-36m-x86_64-linux-gnu.so /usr/lib/python3/dist-packages/apt_pkg.so
     - name: Try running
       run: |
         apt2sbom -c > /dev/null
