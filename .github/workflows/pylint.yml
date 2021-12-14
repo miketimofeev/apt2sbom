@@ -27,7 +27,7 @@ jobs:
     - name: Attempting install
       run: |
         pip install .
-        echo 'PYTHONPATH=${PYTHONPATH}:/usr/lib/python3/dist-packages' >> $GITHUB_ENV
+        echo 'PYTHONPATH=${PYTHONPATH}:/usr/local/lib/python3.9/dist-packages:/usr/local/lib/python3.10/dist-packages:/usr/lib/python3/dist-packages' >> $GITHUB_ENV
     - name: Try running
       run: |
         apt2sbom -c > /dev/null
