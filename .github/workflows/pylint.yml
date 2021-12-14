@@ -27,4 +27,4 @@ jobs:
     - name: Attempting install
       run: |
         pip install .
-	python throwaway.py
+        python throwaway.py
